@@ -19,21 +19,13 @@ while(choice!=6):
         print("Enter filter dimension:")
         d=int(input())
         d=d//2
-        for i in range(d,len(img)-1):
-            for j in range(d,len(img[0])-1):
+        for i in range(d,len(img)-d):
+            for j in range(d,len(img[0])-d):
                 new=[]
-                new.append(img[i][j])
-                for k in range(d,0,-1):
-                    new.append(img[i-k][j-k])
-                    new.append(img[i-k][j])
-                    new.append(img[i-k][j+k])
-                    new.append(img[i][j-k])
-                    new.append(img[i][j-k])
-                    new.append(img[i+k][j-k])
-                    new.append(img[i+k][j])
-                    new.append(img[i+k][j+k])
+                for k in range(d,-d-1,-1):
+                    for l in range(d,-d-1,-1):
+                        new.append(img[i-k][j-l])
                 out.append(min(new))
-        
 
     elif (choice==2):
         print("Enter filter dimension:")
@@ -45,7 +37,6 @@ while(choice!=6):
                 for k in range(d,-d-1,-1):
                     for l in range(d,-d-1,-1):
                         new.append(img[i-k][j-l])
-                print(new)
                 out.append(max(new))
     
     elif (choice==3):
@@ -58,7 +49,6 @@ while(choice!=6):
                 for k in range(d,-d-1,-1):
                     for l in range(d,-d-1,-1):
                         new.append(img[i-k][j-l])
-                print(new)
                 out.append(statistics.median(new))
 
     elif (choice==4):
@@ -72,7 +62,6 @@ while(choice!=6):
                 for k in range(d,-d-1,-1):
                     for l in range(d,-d-1,-1):
                         new.append(img[i-k][j-l])
-                print(new)
                 out.append(sum(new)/denom)
 
     elif (choice==5):
@@ -91,7 +80,6 @@ while(choice!=6):
                 new=[]
                 for k in range(d,-d-1,-1):
                     subrow=[]
-
                     for l in range(d,-d-1,-1):
                         subrow.append(img[i-k][j-l])
                     new.append(subrow)

@@ -1,5 +1,5 @@
 # Image proccessing
-IncludeS:
+Includes:
 
 POINT OPERATIONS
 1. Contrast Stretching

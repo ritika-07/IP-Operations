@@ -1,4 +1,4 @@
-# Image proccessing
+# Image processing
 Includes:
 
 POINT OPERATIONS

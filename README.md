@@ -1,7 +1,8 @@
 # Image processing
-Includes:
 
-POINT OPERATIONS
+### Includes:
+
+#### POINT OPERATIONS
 1. Contrast Stretching
 2. Thresholding
 3. Image Negative
@@ -11,7 +12,7 @@ POINT OPERATIONS
 7. Grey level slicing
 8. Bit plane slicing
 
-IMAGE ENHANCEMENT IN SPATIAL DOMAIN
+#### IMAGE ENHANCEMENT IN SPATIAL DOMAIN
 1. Min filter
 2. Max filter 
 3. Median filter

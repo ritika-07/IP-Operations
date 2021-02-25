@@ -12,3 +12,8 @@ POINT OPERATIONS
 8. Bit plane slicing
 
 IMAGE ENHANCEMENT IN SPATIAL DOMAIN
+1. Min filter
+2. Max filter 
+3. Median filter
+4. Simple Smoothing
+5. Weighted Smoothing

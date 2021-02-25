@@ -1,15 +1,5 @@
 import math
 
-def ZeroPad(img, col):
-    for i in range(col):
-        img.insert(0,0)
-        img.append(0)
-    k=1
-    for i in range(col+2):
-        img.insert(i*(col+2), 0)
-        img.insert(i*(col+2)+col+1, 0)
-
-
 print("\nEnter number of rows")
 num=int(input())
 print("\nEnter the image pixels")
@@ -19,7 +9,8 @@ while (choice!=9):
     flag=0
     out=[]
     print("\n\nOperations:\n\n***********POINT OPERATIONS***********\n1. Contrast Stretching\n2. Thresholding\n3. Image Negative\n4. Logarithmic Transformation\n5. Gamma Correction\n6. Piecewise Contrast Stretching\n7. Grey level slicing\n8. Bit plane slicing\n")
-    print("\n***********IMAGE ENHANCEMENT IN SPATIAL DOMAIN***********\n9. Min filter\n10. Max filter\n11. Median filter\n12. Simple Smoothing\n13. Weighted Smoothing\n\n14. Exit\n")
+    print("\n9. Exit\n")
+    print("Enter your choice:")
     choice=int(input())
 
     if choice==1:
@@ -119,6 +110,7 @@ while (choice!=9):
             for j in out:
                 print(j[i], end=" ")
             print("\n")
+    
     else:
         break
 

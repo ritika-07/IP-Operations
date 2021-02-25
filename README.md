@@ -1,6 +1,7 @@
 # IP-point-operations
-Basic point processing operations for digital image processing:
+Include:
 
+POINT OPERATIONS
 1. Contrast Stretching
 2. Thresholding
 3. Image Negative

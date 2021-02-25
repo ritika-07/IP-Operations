@@ -1,5 +1,5 @@
 # IP-point-operations
-Include:
+IncludeS:
 
 POINT OPERATIONS
 1. Contrast Stretching
@@ -10,3 +10,5 @@ POINT OPERATIONS
 6. Piecewise Contrast Stretching
 7. Grey level slicing
 8. Bit plane slicing
+
+IMAGE ENHANCEMENT IN SPATIAL DOMAIN

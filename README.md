@@ -1,4 +1,4 @@
-# IP-point-operations
+# Image proccessing
 IncludeS:
 
 POINT OPERATIONS

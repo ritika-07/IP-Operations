@@ -1,5 +1,15 @@
 import math
 
+def ZeroPad(img, col):
+    for i in range(col):
+        img.insert(0,0)
+        img.append(0)
+    k=1
+    for i in range(col+2):
+        img.insert(i*(col+2), 0)
+        img.insert(i*(col+2)+col+1, 0)
+
+
 print("\nEnter number of rows")
 num=int(input())
 print("\nEnter the image pixels")
@@ -8,7 +18,8 @@ choice=0
 while (choice!=9):
     flag=0
     out=[]
-    print("\n\nEnter operation number:\n1. Contrast Stretching\n2. Thresholding\n3. Image Negative\n4. Logarithmic Transformation\n5. Gamma Correction\n6. Piecewise Contrast Stretching\n7. Grey level slicing\n8. Bit plane slicing\n9. Exit\n")
+    print("\n\nOperations:\n\n***********POINT OPERATIONS***********\n1. Contrast Stretching\n2. Thresholding\n3. Image Negative\n4. Logarithmic Transformation\n5. Gamma Correction\n6. Piecewise Contrast Stretching\n7. Grey level slicing\n8. Bit plane slicing\n")
+    print("\n***********IMAGE ENHANCEMENT IN SPATIAL DOMAIN***********\n9. Min filter\n10. Max filter\n11. Median filter\n12. Simple Smoothing\n13. Weighted Smoothing\n\n14. Exit\n")
     choice=int(input())
 
     if choice==1:
@@ -33,7 +44,7 @@ while (choice!=9):
                 out.append(255)
         flag=1
 
-    if choice==3:
+    elif choice==3:
         print("Enter L")
         L=int(input())
         for r in img:
@@ -41,7 +52,7 @@ while (choice!=9):
             out.append(s)
         flag=1
 
-    if choice==4:
+    elif choice==4:
         print("Enter c")
         c=float(input())
         for r in img:
@@ -49,17 +60,19 @@ while (choice!=9):
             out.append(s)
         flag=1
 
-    if choice==5:
+    elif choice==5:
         print("Enter c")
         c=float(input())
         print("Enter gamma")
         g=float(input())
+        print("Enter number of bits of image")
+        n=int(input())
         for r in img:
-            s=c*255*(r/255)**(1/g)
+            s=c*((2**n)-1)*(r/((2**n)-1))**(1/g)
             out.append(s)
         flag=1
 
-    if choice==6:
+    elif choice==6:
         print("Enter r1, r2")
         r1=int(input())
         r2=int(input())
@@ -72,7 +85,7 @@ while (choice!=9):
             out.append(s)
         flag=1
 
-    if choice==7:
+    elif choice==7:
         print("Enter A")
         A=int(input())
         print("Enter B")
@@ -93,7 +106,7 @@ while (choice!=9):
                     out.append(r)
         flag=1
 
-    if choice==8:
+    elif choice==8:
         print("Enter number of bits of image")
         n=int(input())
         for r in img:
@@ -106,7 +119,8 @@ while (choice!=9):
             for j in out:
                 print(j[i], end=" ")
             print("\n")
-
+    else:
+        break
 
     if flag==1:
         print("\nOutput:")

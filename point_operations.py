@@ -2,8 +2,15 @@ import math
 
 print("\nEnter number of rows")
 num=int(input())
-print("\nEnter the image pixels")
-img=list(map(int, input().split(" ")))
+
+img=[]
+for i in range(num):
+    print("\nEnter row ", i+1)
+    row_elements=list(map(int, input().split(" ")))
+    for j in row_elements:
+        img.append(j)
+
+#img=list(map(int, input().split(" ")))
 choice=0
 while (choice!=9):
     flag=0
@@ -64,11 +71,13 @@ while (choice!=9):
         flag=1
 
     elif choice==6:
-        print("Enter r1, r2")
+        print("Enter r1")
         r1=int(input())
+        print("Enter r2")
         r2=int(input())
-        print("Enter s1, s2")
+        print("Enter s1")
         s1=int(input())
+        print("Enter s2")
         s2=int(input())
         slope= (s2-s1)/(r2-r1)
         for r in img:

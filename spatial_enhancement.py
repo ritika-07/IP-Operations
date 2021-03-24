@@ -1,4 +1,5 @@
 import statistics
+import math
 
 print("\nEnter number of rows")
 num=int(input())
@@ -70,7 +71,7 @@ while(choice!=6):
         f=[]
         filtersum=0
         for i in range(d):
-            print("Enter filter row ", i)
+            print("Enter filter row ", i+1)
             row=list(map(int,input().split(" ")))
             f.append(row)
             filtersum= filtersum + sum(row)
@@ -94,8 +95,8 @@ while(choice!=6):
 
     print("\nOutput:")
     for i in range (len(out)):
-        print ("%.2f" % out[i], end="\t")
-        if (i+1)%(num-2)==0:
+        print (math.floor(out[i]), end="\t")
+        if (i+1)%(num-(d*2))==0:
             print("\n")
 
 
